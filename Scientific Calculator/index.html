@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="./styleSheet.css">
+    <link rel="stylesheet" href="./bootstrap-5.3.0-alpha1-dist/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="calculatorContainer">
+        <div class="topScreen">
+            <div class=logo>
+                <p class=logoName>KEPELI</p>
+            </div>
+            <form action="">
+                <div class="inputScreen">
+                    <input type="text" name="display" id="calculation" placeholder="0" class="full-width">
+                </div>
+                <div>
+                    <input type="number" id="result" class="text-right full-width" placeholder="0" disabled>
+                </div>
+            </form>
+        </div>
+        <div class="row center numberButtons">
+            <form action="">
+                <div class="numberButtons">
+                    <input class="specialKeys" type="button" value="Del←" onclick = "backSpace()">
+                    <input class="specialKeys" type="button" value="sin( )" onclick = "sin()">
+                    <input class="specialKeys" type="button" value="In( )" onclick = "In()">
+                    <input class="symbol" type="button" value="(" onclick="openBracket(this.value)">
+                    <input class="symbol" type="button" value=")" onclick="closeBracket(this.value)">
+                    <input class="symbol" type="button" value="%" onclick="show('%')">
+                    <input class="clearAll" type="button" value="AC" onclick = "clearScreen()">
+                </div>
+                <div class="numberButtons">
+                    <input class="specialKeys" type="button" value="Rad( )" onclick = "radian()">
+                    <input class="specialKeys" type="button" value="cos( )" onclick = "cos()">
+                    <input class="specialKeys" type="button" value="Log( )" onclick = "Log()">
+                    <input class="numbers" type="button" value="7" onclick="show('7')">
+                    <input class="numbers" type="button" value="8" onclick="show('8')">
+                    <input class="numbers" type="button" value="9" onclick="show('9')">
+                    <input class="symbol" type="button" value="÷" onclick="show('/')">
+                </div>
+                <div class="numberButtons">
+                    <input class="specialKeys" type="button" value="x^-1" onclick = "inverse()">
+                    <input class="specialKeys" type="button" value="tan( )" onclick = "tan()">
+                    <input class="specialKeys" type="button" value="π" onclick = "pi()">
+                    <input class="numbers" type="button" value="4" onclick="show('4')">
+                    <input class="numbers" type="button" value="5" onclick="show('5')">
+                    <input class="numbers" type="button" value="6" onclick="show('6')">
+                    <input class="symbol" type="button" value="x" onclick="show('*')">
+                </div>
+                <div class="numberButtons">
+                    <input class="specialKeys" type="button" value="x²" onclick = "square()">
+                    <input class="specialKeys" type="button" value="√2" onclick = "squareRoot()">
+                    <input class="specialKeys" type="button" value="e" onclick = "exp()">
+                    <input class="numbers" type="button" value="1" onclick="show('1')">
+                    <input class="numbers" type="button" value="2" onclick="show('2')">
+                    <input class="numbers" type="button" value="3" onclick="show('3')">
+                    <input class="symbol" type="button" value="-" onclick="show('-')">
+                </div>
+                <div class="numberButtons">
+                    <input class="specialKeys" type="button" value="x^" onclick = "exponent()">
+                    <input class="specialKeys" type="button" value="√3" onclick = "cubeRoot()">
+                    <input class="specialKeys" type="button" value="x!" onclick = "factorial()">
+                    <input class="numbers" type="button" value="0" onclick="show('0')">
+                    <input class="numbers" type="button" value="." onclick="show('.')">
+                    <input class="equal" type="button" value="=" onclick="calculate()">
+                    <input class="symbol" type="button" value="+" onclick="show('+')">
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>
